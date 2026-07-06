@@ -1,0 +1,37 @@
+.navbar{
+
+    background:#1E293B;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.navbar a{
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#60A5FA;
+}
+
+.navbar .active{
+    color:#38BDF8;
+}

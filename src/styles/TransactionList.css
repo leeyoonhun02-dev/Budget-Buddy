@@ -1,0 +1,200 @@
+.transaction-history {
+  min-height: 650px;
+  background-color: white;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.history-header h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 32px;
+}
+
+.history-count {
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #64748b;
+  padding: 60px 0;
+  font-size: 16px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.transaction-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  
+}
+
+.transaction-table thead {
+  background: #f8fafc;
+}
+
+.transaction-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 2px solid #e2e8f0;
+  background-color: lightblue;
+}
+
+.transaction-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.transaction-table th:third-child {
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.transaction-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.transaction-table td {
+  padding: 18px 16px;
+  vertical-align: middle;
+}
+
+.transaction-table tbody tr {
+  transition: 0.25s;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.transaction-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badge.income {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.expense {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* =========================
+   AMOUNT
+========================= */
+
+.income-text,
+.expense-text {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.income-text {
+  color: #16a34a;
+}
+
+.expense-text {
+  color: #dc2626;
+}
+
+/* =========================
+   TIMESTAMP
+========================= */
+
+.timestamp {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* Transaction Details */
+
+.transaction-description {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 10px;
+}
+
+.transaction-category {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.timestamp {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+

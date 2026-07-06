@@ -1,0 +1,72 @@
+.transaction-form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transaction-form h2 {
+  margin-bottom: 10px;
+}
+
+.transaction-form label {
+  font-weight: 600;
+}
+
+.transaction-form input,
+.transaction-form select {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.transaction-form input::placeholder {
+  color: #9ca3af;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.transaction-form button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.transaction-form button:hover {
+  background: #1d4ed8;
+}
+
+.radio-group {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 5px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #2563eb;
+  width: 18px;
+  height: 18px;
+}

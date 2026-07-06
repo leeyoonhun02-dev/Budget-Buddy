@@ -1,0 +1,167 @@
+/* ===========================
+   FILTER SECTION
+=========================== */
+
+.filter-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   PAGE LAYOUT
+=========================== */
+
+.transaction-content {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.transaction-form {
+  margin: 0;
+}
+
+.transaction-history {
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+}
+
+/* ===========================
+   HISTORY HEADER
+=========================== */
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.history-title {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.history-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ===========================
+   EXPORT BUTTON
+=========================== */
+
+.export-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  border: 2px solid #2563eb;
+  border-radius: 10px;
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.export-btn:hover {
+  background: #2563eb;
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.export-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ===========================
+   CLEAR BUTTON
+=========================== */
+
+.clear-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #ffffff;
+  color: #dc2626;
+
+  border: 2px solid #dc2626;
+  border-radius: 10px;
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.2);
+}
+
+.clear-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1000px) {
+  .transaction-content {
+    grid-template-columns: 1fr;
+  }
+
+  .history-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .history-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .export-btn,
+  .clear-btn {
+    width: 100%;
+  }
+}
