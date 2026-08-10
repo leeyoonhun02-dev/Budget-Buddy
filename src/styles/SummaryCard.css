@@ -1,0 +1,64 @@
+.summary-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+
+  transition: all 0.25s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+.summary-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 30px;
+
+  flex-shrink: 0;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-content h3 {
+  margin: 0;
+  margin-bottom: 6px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+.summary-content h2 {
+  margin: 0;
+
+  font-size: clamp(1.4rem, 2vw, 2.2rem);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #1e293b;
+}

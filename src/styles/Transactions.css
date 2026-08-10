@@ -1,0 +1,304 @@
+/* ===========================
+   FILTER SECTION
+=========================== */
+
+.filter-section {
+  margin-bottom: 28px;
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* ===========================
+   PAGE ERROR
+=========================== */
+
+.transaction-page-error {
+  margin: 0 0 24px;
+  padding: 13px 16px;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===========================
+   PAGE LAYOUT
+=========================== */
+
+.transaction-content {
+  display: grid;
+  grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.transaction-form {
+  position: sticky;
+  top: 100px;
+
+  margin: 0;
+}
+
+.transaction-history {
+  min-width: 0;
+  min-height: 620px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 26px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* ===========================
+   HISTORY HEADER
+=========================== */
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+.history-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.history-title {
+  margin: 0;
+
+  color: #172033;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.history-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 32px;
+  padding: 6px 12px;
+
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.history-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.export-btn,
+.clear-btn {
+  min-width: 132px;
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 9px 16px;
+
+  border-radius: 11px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.export-btn {
+  background: #ffffff;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+
+.export-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+  transform: translateY(-1px);
+}
+
+.clear-btn {
+  background: #ffffff;
+  border: 1px solid #dc2626;
+  color: #dc2626;
+}
+
+.clear-btn:hover {
+  background: #dc2626;
+  color: #ffffff;
+
+  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.18);
+  transform: translateY(-1px);
+}
+
+.export-btn:active,
+.clear-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.export-btn:focus-visible,
+.clear-btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline-offset: 2px;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.history-status {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  color: #64748b;
+  text-align: center;
+}
+
+.history-status p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  width: 34px;
+  height: 34px;
+
+  border: 4px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+
+  animation: transaction-spin 0.75s linear infinite;
+}
+
+@keyframes transaction-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1050px) {
+  .transaction-content {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-form {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .filter-section {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .transaction-history {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .history-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .history-heading {
+    justify-content: space-between;
+  }
+
+  .history-actions {
+    width: 100%;
+  }
+
+  .export-btn,
+  .clear-btn {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .history-actions {
+    flex-direction: column;
+  }
+
+  .export-btn,
+  .clear-btn {
+    width: 100%;
+  }
+}
+
+.clear-btn:disabled,
+.export-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+
+  box-shadow: none;
+  transform: none;
+}

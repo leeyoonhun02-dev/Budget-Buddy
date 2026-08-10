@@ -1,0 +1,222 @@
+.transaction-form {
+  width: 100%;
+  padding: 26px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+
+  box-sizing: border-box;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.transaction-form:hover {
+  box-shadow:
+    0 14px 36px rgba(15, 23, 42, 0.08),
+    0 3px 10px rgba(15, 23, 42, 0.05);
+}
+
+.transaction-form h2 {
+  margin: 0 0 8px;
+
+  color: #172033;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.transaction-form label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.transaction-form input,
+.transaction-form select {
+  width: 100%;
+  min-height: 44px;
+
+  padding: 11px 13px;
+
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.transaction-form input::placeholder {
+  color: #94a3b8;
+}
+
+.transaction-form input:hover,
+.transaction-form select:hover {
+  border-color: #94a3b8;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  outline: none;
+
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.transaction-form button {
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 11px 16px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.transaction-form button:hover:not(:disabled) {
+  background: #1d4ed8;
+
+  box-shadow: 0 7px 16px rgba(37, 99, 235, 0.22);
+  transform: translateY(-1px);
+}
+
+.transaction-form button:active:not(:disabled) {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.transaction-form button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.22);
+  outline-offset: 2px;
+}
+
+.transaction-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RADIO BUTTONS
+========================= */
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+
+  margin-bottom: 3px;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #334155;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  width: 17px;
+  height: 17px;
+  min-height: auto;
+
+  padding: 0;
+
+  accent-color: #2563eb;
+}
+
+/* =========================
+   AMOUNT INPUT
+========================= */
+
+.amount-input {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.amount-input span {
+  position: absolute;
+  left: 13px;
+  z-index: 1;
+
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.amount-input input {
+  padding-left: 32px;
+}
+
+/* =========================
+   ERRORS
+========================= */
+
+.form-error {
+  margin: 0 0 4px;
+  padding: 11px 13px;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =========================
+   CANCEL EDIT
+========================= */
+
+.transaction-form .cancel-edit-btn {
+  margin-top: 0;
+
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+}
+
+.transaction-form .cancel-edit-btn:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #1e293b;
+
+  box-shadow: none;
+}
