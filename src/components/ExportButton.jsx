@@ -19,22 +19,34 @@ const ExportButton = () => {
       "Updated At",
     ];
 
+    const formatDate = (date) => {
+      if (!date) return "";
+
+      return String(date).split("T")[0];
+    };
+
+    const escapeCSV = (value) => {
+      const stringValue = String(value ?? "");
+
+      return `"${stringValue.replace(/"/g, '""')}"`;
+    };
+
     const rows = transactions.map((transaction) => [
       transaction.description,
       transaction.category,
       transaction.type,
       transaction.amount,
-      transaction.date,
+      formatDate(transaction.transactionDate),
       transaction.createdAt,
       transaction.updatedAt,
     ]);
 
     const csvContent = [
-      headers.join(","),
-      ...rows.map((row) => row.join(",")),
-    ].join("\n");
+      headers.map(escapeCSV).join(","),
+      ...rows.map((row) => row.map(escapeCSV).join(",")),
+    ].join("\r\n");
 
-    const blob = new Blob([csvContent], {
+    const blob = new Blob(["\uFEFF", csvContent], {
       type: "text/csv;charset=utf-8;",
     });
 
@@ -45,16 +57,17 @@ const ExportButton = () => {
     link.href = url;
     link.download = "budget-buddy-transactions.csv";
 
+    document.body.appendChild(link);
+
     link.click();
+
+    document.body.removeChild(link);
 
     URL.revokeObjectURL(url);
   };
 
   return (
-    <button
-      className="export-btn"
-      onClick={exportToCSV}
-    >
+    <button type="button" className="export-btn" onClick={exportToCSV}>
       📥 Export Transactions
     </button>
   );
