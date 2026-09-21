@@ -22,7 +22,13 @@ const ExportButton = () => {
     const formatDate = (date) => {
       if (!date) return "";
 
-      return String(date).split("T")[0];
+      const [year, month, day] = String(date).split("T")[0].split("-");
+
+      const monthName = new Date(
+        Date.UTC(Number(year), Number(month) - 1, 1),
+      ).toLocaleString("en-US", { month: "long" }, { timeZone: "UTC" });
+
+      return `${monthName} ${day}, ${year}`;
     };
 
     const escapeCSV = (value) => {
